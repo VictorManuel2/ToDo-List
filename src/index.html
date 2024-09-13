@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO List</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-[#cbd7e3] flex justify-center items-center min-h-screen max-sm:!w-full">
+    <section class="todo bg-white w-[600px] p-6 rounded-2xl h-auto flex flex-col mx-12 max-sm:w-full">
+        <div class="date flex justify-between text-lg text-[#8ea6c8] my-2 max-sm:text-base">
+            <div id="day" >
+            </div>
+            <div id="hours">
+                00:00:00
+            </div>
+        </div>
+        <div>
+            <h1 class="text-[#063c76] text-xl font-semibold">To-do List</h1>
+        </div>
+        <div class="input my-4">
+            <form action="" id="formulario" class="flex flex-col gap-1 max-sm:gap-9">
+                <div class="h-12 max-sm:flex max-sm:flex-col max-sm:gap-1">
+                    <input class="border-2 rounded py-1 w-[69%] max-sm:w-full px-3 text-[#063c76] border-[#8ea6c8] focus:border-[#063c76] focus:outline-none" type="text" name="task" id="task" placeholder="Escribe una tarea">
+                    <input class="border-2 rounded py-1 w-[30%] max-sm:w-full px-3 text-[#063c76] border-[#8ea6c8] focus:border-[#063c76] focus:outline-none" type="time" name="time" id="time">
+                    
+                </div>
+                <div class="flex gap-24">
+                    <input class="w-[23%] cursor-pointer bg-[#063c76] py-[5px] px-2 rounded text-center text-white hover:bg-[#063c76c5] transition-all ease-in-out duration-500 max-sm:w-[40%]" type="submit" value="Agregar">
+
+                    <div id="cargando" class="h-2 hidden">
+                        <div class="spinner">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                          </div>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        <div id="resultado" class="flex flex-col gap-1">  <!--overflow-y-scroll-->
+            <p class="text-center text-[#8ea6c8] font-semibold">Agrega una tarea</p>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>
